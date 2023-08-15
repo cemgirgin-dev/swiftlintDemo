@@ -26,10 +26,10 @@ excluded:
     - Pods
     
 identifier_name:
-    min_length: 20
+    min_length: 1
     max_length:
-        warning: 50
-        error: 60
+        warning: 20
+        error: 30
 
 function_body_length:
     warning: 70

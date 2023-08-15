@@ -13,6 +13,8 @@
 		DF72D32A2A7BB95500F8D111 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF72D3282A7BB95500F8D111 /* Main.storyboard */; };
 		DF72D32C2A7BB95500F8D111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF72D32B2A7BB95500F8D111 /* Assets.xcassets */; };
 		DF72D32F2A7BB95500F8D111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF72D32D2A7BB95500F8D111 /* LaunchScreen.storyboard */; };
+		DFD1C04A2A835AB100B29058 /* lintDemoCore in Frameworks */ = {isa = PBXBuildFile; productRef = DFD1C0492A835AB100B29058 /* lintDemoCore */; };
+		DFD1C0542A836ABF00B29058 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1C0532A836ABF00B29058 /* NewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DF72D32B2A7BB95500F8D111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF72D32E2A7BB95500F8D111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF72D3302A7BB95500F8D111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD1C0472A835A9100B29058 /* lintDemoCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = lintDemoCore; path = ../lintDemoCore; sourceTree = "<group>"; };
+		DFD1C0532A836ABF00B29058 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD1C04A2A835AB100B29058 /* lintDemoCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +45,10 @@
 		DF72D3162A7BB95500F8D111 = {
 			isa = PBXGroup;
 			children = (
+				DFD1C0462A835A9100B29058 /* Packages */,
 				DF72D3212A7BB95500F8D111 /* swiftlintDemo */,
 				DF72D3202A7BB95500F8D111 /* Products */,
+				DFD1C0482A835AB100B29058 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +63,39 @@
 		DF72D3212A7BB95500F8D111 /* swiftlintDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DFB1701B2A83544D00BD5968 /* UI */,
 				DF72D3222A7BB95500F8D111 /* AppDelegate.swift */,
 				DF72D3242A7BB95500F8D111 /* SceneDelegate.swift */,
-				DF72D3262A7BB95500F8D111 /* ViewController.swift */,
 				DF72D3282A7BB95500F8D111 /* Main.storyboard */,
 				DF72D32B2A7BB95500F8D111 /* Assets.xcassets */,
 				DF72D32D2A7BB95500F8D111 /* LaunchScreen.storyboard */,
 				DF72D3302A7BB95500F8D111 /* Info.plist */,
 			);
 			path = swiftlintDemo;
+			sourceTree = "<group>";
+		};
+		DFB1701B2A83544D00BD5968 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DF72D3262A7BB95500F8D111 /* ViewController.swift */,
+				DFD1C0532A836ABF00B29058 /* NewViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DFD1C0462A835A9100B29058 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DFD1C0472A835A9100B29058 /* lintDemoCore */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		DFD1C0482A835AB100B29058 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +108,7 @@
 				DF72D31B2A7BB95500F8D111 /* Sources */,
 				DF72D31C2A7BB95500F8D111 /* Frameworks */,
 				DF72D31D2A7BB95500F8D111 /* Resources */,
+				DFD1C0552A836EF400B29058 /* Inheritance Rule */,
 				DF72D3362A7BBA1600F8D111 /* Swiftlint */,
 			);
 			buildRules = (
@@ -84,6 +116,9 @@
 			dependencies = (
 			);
 			name = swiftlintDemo;
+			packageProductDependencies = (
+				DFD1C0492A835AB100B29058 /* lintDemoCore */,
+			);
 			productName = swiftlintDemo;
 			productReference = DF72D31F2A7BB95500F8D111 /* swiftlintDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +147,9 @@
 				Base,
 			);
 			mainGroup = DF72D3162A7BB95500F8D111;
+			packageReferences = (
+				DFD1C04E2A83675200B29058 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = DF72D3202A7BB95500F8D111 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +175,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		DF72D3362A7BBA1600F8D111 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -153,6 +191,25 @@
 			shellPath = /bin/sh;
 			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		DFD1C0552A836EF400B29058 /* Inheritance Rule */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Inheritance Rule";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BASE_VIEW_CONTROLLER=\"BaseViewController\"\nPACKAGE_NAME=\"lintDemoCore\"\n\n# Search for Swift files in the lintDemo/UI folder that contain a class not inheriting from the base view controller\nfor FILE in $(find swiftlintDemo/UI -name \"*ViewController*.swift\" -or -name \"*viewcontroller*.swift\"); do\n    # Exclude the BaseViewController itself\n    if grep -q \"class $BASE_VIEW_CONTROLLER\" \"$FILE\"; then\n        continue\n    fi\n\n    # Check if the file contains a class declaration not inheriting from the base view controller\n    HAS_INVALID_INHERITANCE=$(grep -E \"class [A-Za-z0-9]+: [A-Za-z0-9]+\" \"$FILE\" | grep -v \"$BASE_VIEW_CONTROLLER\")\n\n    # If the file contains invalid inheritance, display an error message and halt the build\n    if [ -n \"$HAS_INVALID_INHERITANCE\" ]; then\n        echo \"Error: $FILE doesn't inherit from $BASE_VIEW_CONTROLLER in package $PACKAGE_NAME\"\n        exit 1\n    fi\ndone\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -163,6 +220,7 @@
 				DF72D3272A7BB95500F8D111 /* ViewController.swift in Sources */,
 				DF72D3232A7BB95500F8D111 /* AppDelegate.swift in Sources */,
 				DF72D3252A7BB95500F8D111 /* SceneDelegate.swift in Sources */,
+				DFD1C0542A836ABF00B29058 /* NewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +438,24 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DFD1C04E2A83675200B29058 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DFD1C0492A835AB100B29058 /* lintDemoCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = lintDemoCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF72D3172A7BB95500F8D111 /* Project object */;
 }

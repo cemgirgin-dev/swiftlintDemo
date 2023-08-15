@@ -6,9 +6,8 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
-
+import lintDemoCore
+class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         var name = "Cem"
@@ -33,3 +32,5 @@ class ViewController: UIViewController {
     
 }
 // Warning -> Trailing Newline Violation: Files should have a single trailing newline (trailing_newline)
+// Rulleri otomatik düzelten plugin -> tool
+// Baseviewcontroller dan oluşturmlayan vcler hata yaratma && commit atılmama
